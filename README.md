@@ -1,5 +1,5 @@
 # EventConnect-DSW2
-Plataforma de que conecta prestadores de serviço (como garçons, DJs, fotógrafos, seguranças, entre outros) a pessoas que desejam contratar esses serviços para seus eventos, como aniversários, casamentos, festas universitárias e eventos corporativos., desenvolvida como projeto da disciplina Desenvolvimento de Software para Web 2. Inclui protótipos de telas e desenvolvimento front-end.
+Plataforma que conecta prestadores de serviço (como garçons, DJs, fotógrafos, seguranças, entre outros) a pessoas que desejam contratar esses serviços para seus eventos, como aniversários, casamentos, festas universitárias e eventos corporativos., desenvolvida como projeto da disciplina Desenvolvimento de Software para Web 2. Inclui protótipos de telas e desenvolvimento front-end.
 
 ## Foco principal
 Por conta do tempo estipulado para execução do projeto na matéria, o foco principal é criar as telas das visões de prestador de serviço.
