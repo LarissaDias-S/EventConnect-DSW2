@@ -1,0 +1,49 @@
+Documento de Requisitos: EventConnect
+Este documento consta os requisitos do trabalho 1 da disciplina "Desenvolvimento de Software para Web 2":
+
+1.Trabalho 1:
+1.1. Visão Geral do Projeto
+
+O projeto EventConnect é um aplicativo web destinado à organização e divulgação de eventos, focado na primeira fase do desenvolvimento. O objetivo é criar a identidade visual, o layout e as telas estáticas, garantindo que a base do projeto seja visualmente atraente e funcionalmente responsiva em diferentes dispositivos.
+
+1.2. Requisitos Funcionais
+(Nesta fase, não há requisitos de lógica ou funcionalidades, apenas de estrutura e navegação.)
+
+1.3. Requisitos Não Funcionais
+1.3.1. Design e Identidade Visual (R1)
+
+Paleta de Cores: O aplicativo deve ter uma paleta de cores bem definida e harmoniosa, inspirada em conceitos como Material Design.
+
+Identidade Visual: O design deve ter a aparência de um aplicativo real, com um layout profissional e coeso. Deve ser visualmente agradável e demonstrável a um público externo.
+
+1.3.2. Estrutura e Navegação (R2)
+
+Múltiplas Telas: O projeto deve conter, no mínimo, duas telas (páginas HTML) diferentes, como a página inicial, uma página de detalhes do evento, ou um perfil de usuário.
+
+1.3.3. Responsividade (R3)
+
+Layout Responsivo: O layout do aplicativo deve se adaptar e ser plenamente funcional em diferentes tamanhos de tela, incluindo:
+
+Desktop: Visualização otimizada para telas grandes.
+
+Tablet: Ajustes no layout para telas médias.
+
+Mobile: Design adequado para visualização em smartphones, com navegação intuitiva e elementos facilmente clicáveis.
+
+4. Requisitos de Entrega
+Fase 1: Os requisitos R1, R2 e R3 devem ser totalmente atendidos.
+
+Tecnologias: A implementação deve ser feita exclusivamente com HTML e CSS.
+
+Lógica: Nenhuma lógica de programação (JavaScript ou outra) deve ser utilizada nesta fase.
+
+Entrega: O código-fonte deve ser enviado via GitHub.
+
+Avaliação: A apresentação do projeto será agendada para demonstração e avaliação.
+
+
+
+
+
+
+
