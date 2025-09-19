@@ -1,6 +1,12 @@
 # EventConnect-DSW2
 Plataforma de que conecta prestadores de serviço (como garçons, DJs, fotógrafos, seguranças, entre outros) a pessoas que desejam contratar esses serviços para seus eventos, como aniversários, casamentos, festas universitárias e eventos corporativos., desenvolvida como projeto da disciplina Desenvolvimento de Software para Web 2. Inclui protótipos de telas e desenvolvimento front-end.
 
+## Foco principal
+Por conta do tempo estipulado para execução do projeto na matéria, o foco principal é criar as telas das visões de prestador de serviço.
+
+## Arquivos
+Este projeto contém requirements.txt que mostra todos os requisitos que devem ser seguidos, pasta "partials" que contém elementos repetitivos como footers e headers, pasta "assets/css" que contém a estilização do projeto, pasta "assets/images" que contém as imagens usadas, pasta README.md com instruções e pasta "html" com as versões html das telas.
+
 ## 🖌️ Telas Interativas no Figma
 
 Clique no link abaixo para visualizar a versão interativa dos protótipos:  
