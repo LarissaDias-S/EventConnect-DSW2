@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Evento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Estilos comuns para campos de formulário */
+        .input-style {
+            padding: 0.75rem 1rem; /* py-3 px-4 */
+            border: 1px solid #c4b5fd; /* purple-300 */
+            border-radius: 0.75rem; /* rounded-xl */
+            background-color: #f3e8ff; /* purple-100 */
+            color: #4c1d95; /* purple-800 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Estilo para o campo de observações (textarea) */
+        .textarea-style {
+            padding: 1rem;
+            border: 1px solid #c4b5fd;
+            border-radius: 0.75rem;
+            background-color: #f3e8ff;
+            color: #4c1d95;
+            min-height: 10rem; /* Altura mínima para parecer com a imagem */
+        }
+        /* Estilo para o botão de calendário/relógio (ícone dentro do campo) */
+        .icon-button-field {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6d28d9; /* purple-700 */
+        }
+        /* Estilo para o dia selecionado no calendário */
+        .selected-date {
+            background-color: #6d28d9; /* purple-700 */
+            color: white;
+            font-weight: bold;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .active-nav-item { color: #6d28d9 !important; }
+    </style>
+</head>
+<body class="bg-purple-50 text-gray-800 flex flex-col min-h-screen font-sans">
+
+<div class="flex-1">
+
+    <div id="novo-evento-view" class="p-4 space-y-6">
+        
+        <header class="flex justify-between items-center pt-2 mb-4">
+            <button id="btn-voltar-novo-evento" class="w-6 h-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+            
+            <h1 class="text-xl font-bold text-gray-800">Novo Evento</h1>
+            
+            <div class="text-2xl">🎉</div>
+        </header>
+
+        <div class="space-y-1">
+            <label for="nome-evento" class="text-sm font-semibold text-gray-600">Nome do Evento</label>
+            <input type="text" id="nome-evento" placeholder="Festinha da Ana" value="Festinha da Ana" class="input-style w-full focus:ring-2 focus:ring-purple-500 focus:bg-white">
+        </div>
+        
+        <div class="space-y-1">
+            <label for="tipo-evento" class="text-sm font-semibold text-gray-600">Tipo do Evento</label>
+            <div class="relative">
+                <select id="tipo-evento" class="input-style appearance-none w-full focus:ring-2 focus:ring-purple-500 focus:bg-white">
+                    <option value="aniversario">Festa de Aniversário</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="formatura">Formatura</option>
+                    <option value="outro">Outro</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-purple-700">
+                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </div>
+            </div>
+        </div>
+        
+        <div class="space-y-1">
+            <label for="data-evento" class="text-sm font-semibold text-gray-600">Data</label>
+            <div class="relative">
+                <input type="text" id="data-evento" placeholder="MM/DD/YYYY" value="08/17/2025" class="input-style w-full focus:ring-2 focus:ring-purple-500 focus:bg-white pr-10">
+                <button class="icon-button-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                </button>
+            </div>
+            <p class="text-xs font-medium text-gray-400 pl-4">MM/DD/YYYY</p>
+
+            <div class="bg-white rounded-xl shadow-lg mt-4 p-4 border border-purple-200">
+                <div class="flex justify-between items-center text-lg font-semibold text-gray-800 mb-4">
+                    <button class="text-gray-500 hover:text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                    <span class="text-purple-700">Aug</span>
+                    <button class="text-gray-500 hover:text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+
+                    <button class="text-gray-500 hover:text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button>
+                    <span class="text-purple-700">2025</span>
+                    <button class="text-gray-500 hover:text-purple-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg></button>
+                </div>
+
+                <div class="grid grid-cols-7 text-center font-bold text-sm text-gray-500 mb-2">
+                    <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
+                </div>
+
+                <div class="grid grid-cols-7 text-center text-sm gap-y-2">
+                    <span class="text-gray-300 py-2">26</span><span class="text-gray-300 py-2">27</span><span class="text-gray-300 py-2">28</span><span class="text-gray-300 py-2">29</span><span class="text-gray-300 py-2">30</span><span class="text-gray-300 py-2">31</span><span class="py-2">1</span>
+                    <span class="py-2">2</span><span class="py-2">3</span><span class="py-2">4</span><span class="py-2">5</span><span class="py-2">6</span><span class="py-2">7</span><span class="py-2">8</span>
+                    <span class="py-2">9</span><span class="py-2">10</span><span class="py-2">11</span><span class="py-2">12</span><span class="py-2">13</span><span class="py-2">14</span><span class="py-2">15</span>
+                    <span class="py-2">16</span><div class="selected-date mx-auto">17</div><span class="py-2">18</span><span class="py-2">19</span><span class="py-2">20</span><span class="py-2">21</span><span class="py-2">22</span>
+                    <span class="py-2">23</span><span class="py-2">24</span><span class="py-2">25</span><span class="py-2">26</span><span class="py-2">27</span><span class="py-2">28</span><span class="py-2">29</span>
+                    <span class="py-2 text-gray-300">30</span><span class="py-2 text-gray-300">1</span><span class="py-2 text-gray-300">2</span><span class="py-2 text-gray-300">3</span><span class="py-2 text-gray-300">4</span><span class="py-2 text-gray-300">5</span><span class="py-2 text-gray-300">6</span>
+                </div>
+
+                <div class="flex justify-between items-center text-sm font-semibold mt-4">
+                    <button class="text-gray-500">Clear</button>
+                    <div class="space-x-4">
+                        <button class="text-gray-500">Cancel</button>
+                        <button class="text-purple-700">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-1">
+            <label for="local-evento" class="text-sm font-semibold text-gray-600">Local</label>
+            <div class="relative">
+                <input type="text" id="local-evento" placeholder="Salão Pinheiros" value="Salão Pinheiros" class="input-style w-full focus:ring-2 focus:ring-purple-500 focus:bg-white pr-10">
+                <button class="icon-button-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="space-y-1">
+            <label for="horario-evento" class="text-sm font-semibold text-gray-600">Horário</label>
+            <div class="relative">
+                <input type="text" id="horario-evento" placeholder="20:00" value="20:00" class="input-style w-full focus:ring-2 focus:ring-purple-500 focus:bg-white pr-10">
+                <button class="icon-button-field">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="space-y-1">
+            <label for="observacoes" class="text-sm font-semibold text-gray-600">Observações Adicionais</label>
+            <textarea id="observacoes" class="textarea-style w-full focus:ring-2 focus:ring-purple-500 focus:bg-white"></textarea>
+        </div>
+
+        <button class="w-full py-3 bg-purple-700 text-white font-bold rounded-xl shadow-lg hover:bg-purple-800 transition duration-150">
+            Criar Evento
+        </button>
+
+    </div>
+
+    <div id="home-view" class="hidden"></div>
+    <div id="meus-eventos-view" class="hidden"></div>
+    <div id="meus-contratos-view" class="hidden"></div>
+    <div id="detalhes-evento-view" class="hidden"></div>
+    <div id="detalhes-contrato-view" class="hidden"></div>
+
+</div>
+
+<nav class="bg-white shadow-md flex justify-around py-2 border-t mt-auto sticky bottom-0">
+    <button id="btn-nav-inicio" class="flex flex-col items-center justify-center text-purple-700 active-nav-item w-1/4">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1V10a1 1 0 00-1-1H7a1 1 0 00-1 1v10a1 1 0 001 1h2z" /></svg>
+        <span class="text-xs font-semibold">Início</span>
+    </button>
+    <button id="btn-nav-buscar" class="flex flex-col items-center justify-center text-gray-500 w-1/4">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        <span class="text-xs font-semibold">Buscar</span>
+    </button>
+    <button id="btn-nav-contratos" class="flex flex-col items-center justify-center text-gray-500 w-1/4">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        <span class="text-xs font-semibold">Contratos</span>
+    </button>
+    <button id="btn-nav-perfil" class="flex flex-col items-center justify-center text-gray-500 w-1/4">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+        <span class="text-xs font-semibold">Perfil</span>
+    </button>
+</nav>
+
+<script>
+    // Se você for integrar esta tela ao seu script de navegação principal,
+    // o código ficaria assim.
+    
+    // 1. Defina a nova view
+    const novoEventoView = document.getElementById('novo-evento-view');
+    // 2. Adicione esta view à sua lista de views
+    // allViews.push(novoEventoView);
+    
+    // 3. Adicione um listener para o botão de voltar,
+    // que voltaria para a tela anterior (ex: Meus Eventos ou Home)
+    const btnVoltarNovoEvento = document.getElementById('btn-voltar-novo-evento');
+    
+    // A função 'navigateTo' precisa ser global para funcionar.
+    // btnVoltarNovoEvento.addEventListener('click', () => {
+    //     navigateTo(homeView); // Ou meusEventosView
+    // });
+    
+    // No código de exemplo, vou apenas ocultar esta view por segurança.
+    // Esta tela seria exibida quando o usuário clicasse em "Criar Novo Evento" na Home.
+</script>
+
+</body>
+</html>
