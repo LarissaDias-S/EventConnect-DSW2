@@ -1,7 +1,7 @@
 /*
  * ARQUIVO CSS BÁSICO
  * Este arquivo contém estilos globais que se aplicam a todas as páginas do seu site.
- * Adicione novos estilos aqui para manter a consistência do design.
+ * Adicione novos estilos aqui para manter a consistência do design!!!
 */
 
 /* Reset de estilos básicos para garantir que o site se pareça igual em todos os navegadores */
@@ -16,8 +16,211 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #faf5ff; /* Alterado para purple-50 para combinar com o design */
 }
+
+/* NOVOS ESTILOS PARA AS TELAS DO PRESTADOR */
+
+/* Estilos comuns para os campos de formulário */
+.input-style {
+    padding: 0.75rem 1rem;
+    border: 1px solid #c4b5fd;
+    border-radius: 0.75rem;
+    background-color: #f3e8ff;
+    color: #4c1d95;
+    font-weight: 600;
+    width: 100%;
+}
+
+.textarea-style {
+    padding: 1rem;
+    border: 1px solid #c4b5fd;
+    border-radius: 0.75rem;
+    background-color: #f3e8ff;
+    color: #4c1d95;
+    min-height: 10rem;
+    width: 100%;
+    resize: vertical;
+}
+
+.icon-button-field {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6d28d9;
+}
+
+.selected-date {
+    background-color: #6d28d9;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-nav-item { 
+    color: #6d28d9 !important; 
+}
+
+/* Cards e containers */
+.card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #e9d5ff;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #6d28d9;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5b21b6;
+}
+
+.btn-success {
+    background: #10b981;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #059669;
+}
+
+.btn-secondary {
+    background: #6b7280;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #4b5563;
+}
+
+/* Navegação inferior */
+.nav-bottom {
+    background-color: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #e5e7eb;
+    z-index: 1000;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    width: 25%;
+    padding: 0.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-item.active {
+    color: #6d28d9;
+}
+
+.nav-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+/* Container principal para o conteúdo */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-bottom: 5rem; /* Espaço para a navegação inferior */
+}
+
+/* Informações do serviço */
+.info-servico {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.info-servico p {
+    margin: 0.5rem 0;
+}
+
+/* Horários */
+.horarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.horario-item {
+    background: #e9ecef;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        padding-bottom: 5rem;
+    }
+    
+    .horarios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ESTILOS EXISTENTES (que foram mantidos para compatibilidade) */
 
 /* Estilos para o cabeçalho e menu de navegação */
 .cabecalho {
