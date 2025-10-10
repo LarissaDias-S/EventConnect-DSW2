@@ -3,7 +3,9 @@ Plataforma que conecta prestadores de serviço (como garçons, DJs, fotógrafos,
 
 ## Colaboradores
 Larissa Dias da Silva RA:800204
+
 Julia Fernanda Gonçalves Gaziero RA:811852
+
 Julia Pedro Silva RA:820869
 
 ## Foco principal
