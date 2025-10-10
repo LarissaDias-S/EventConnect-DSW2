@@ -1,6 +1,11 @@
 # EventConnect-DSW2
 Plataforma que conecta prestadores de serviço (como garçons, DJs, fotógrafos, seguranças, entre outros) a pessoas que desejam contratar esses serviços para seus eventos, como aniversários, casamentos, festas universitárias e eventos corporativos., desenvolvida como projeto da disciplina Desenvolvimento de Software para Web 2. Inclui protótipos de telas e desenvolvimento front-end.
 
+##Colaboradores
+Larissa Dias da Silva RA:800204
+Julia Fernanda Gonçalves Gaziero RA:811852
+Julia Pedro Silva RA:820869
+
 ## Foco principal
 Por conta do tempo estipulado para execução do projeto na matéria, o foco principal é criar as telas das visões de prestador de serviço.
 
